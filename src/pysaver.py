@@ -1,6 +1,6 @@
 """repl_saver.py - Save python repl history."""
 import readline
-from datetime.datetime import now
+from datetime import datetime
 
 
 # REPL history saved:
@@ -18,7 +18,7 @@ def comment_blank_remove_line(lines):
 
 
 def check_previous_save(filename):
-    """"""
+    """Checks if file exists."""
     try:
         with open(filename, "r") as f:
             lines = f.read().split("\n")
@@ -45,10 +45,10 @@ def repl_history(num_lines=-1, file_name="saved_repl_history.py"):
         # range from n->end in order to incl. recent line
         with open(file_name, "at") as f:
             f.write("\n# Session beginning:")
-            f.write("\n# " + now().isoformat())
+            f.write("\n# " + datetime.now().isoformat())
             for i in range(total - num_lines, total):
                 f.write(readline.get_history_item(i + 1)+"\n")
             f.write("\n")
  
  
- repl_history()
+repl_history()
