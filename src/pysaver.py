@@ -6,7 +6,6 @@ from datetime import datetime
 # REPL history saved:
 # 2022-07-10T00:00:18.809794
 
-
 def sublist(lst1, lst2):
    ls1 = [element for element in lst1 if element in lst2]
    ls2 = [element for element in lst2 if element in lst1]
@@ -49,6 +48,6 @@ def repl_history(num_lines=-1, file_name="saved_repl_history.py"):
             for i in range(total - num_lines, total):
                 f.write(readline.get_history_item(i + 1)+"\n")
             f.write("\n")
- 
- 
+
+
 repl_history()
