@@ -8,7 +8,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name = 'pysaver',
-    version = '0.0.4.1',
+    version = '0.0.4.2',
     py_modules = ['pysaver'],
     author = 'M J Lally',
     author_email = 'm.j.lally@outlook.com',
